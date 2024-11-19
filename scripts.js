@@ -1,4 +1,3 @@
-// Controlar el evento de envío del formulario
 document.getElementById('entityForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
@@ -21,15 +20,15 @@ const entities = []; // Arreglo para almacenar entidades
 
 // Función para agregar una entidad a la tabla
 function addEntityToTable(entity) {
-    const status = 'Almacenable'; // Estado de la entidad
+    const status = 'Almacenable'; // Asignar estado 'Almacenable'
     entities.push(entity); // Almacenar la entidad en el arreglo
 
     const tableBody = document.querySelector('#entitiesTable tbody'); // Seleccionar el tbody de la tabla
     const row = tableBody.insertRow(); // Crear una nueva fila en la tabla
-    row.insertCell(0).innerText = entity.item;
-    row.insertCell(1).innerText = entity.tipo;
-    row.insertCell(2).innerText = entity.subtipo;
-    row.insertCell(3).innerText = entity.promo;
+    row.insertCell(0).innerText = entity.item; // Insertar item
+    row.insertCell(1).innerText = entity.tipo; // Insertar tipo
+    row.insertCell(2).innerText = entity.subtipo; // Insertar subtipo
+    row.insertCell(3).innerText = entity.promo; // Insertar promo
     row.insertCell(4).innerText = status; // Asignar el estado
 
     clearFormInputs(); // Limpiar los campos del formulario
