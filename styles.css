@@ -9,7 +9,11 @@ h1 {
     text-align: center; /* Centrar el texto */
     margin-top: 20px;  /* Espacio superior opcional */
     margin-bottom: 20px; /* Espacio inferior opcional */
-    color: #333; /* Color del texto */
+    color: #A0C4FF; /* Azul suave (pastel) */
+    font-size: 2.5em; /* Aumentar el tamaño de la fuente */
+    font-weight: bold; /* Asegúrate de que el texto esté en negrita */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto para profundidad */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 form {
