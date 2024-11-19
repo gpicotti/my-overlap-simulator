@@ -1,29 +1,43 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Color de fondo ligero */
+    margin: 0; /* Sin margen en el body */
+    padding: 20px; /* Padding alrededor de todo el contenido */
 }
 
 h1 {
     text-align: center; /* Centrar el texto */
     margin-top: 20px;  /* Espacio superior opcional */
     margin-bottom: 20px; /* Espacio inferior opcional */
+    color: #333; /* Color del texto */
 }
 
 form {
     margin-bottom: 20px;
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 20px; /* Espacio interno del formulario */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-top: 20px; /* Margen superior */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: left; /* Alinear texto a la izquierda */
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Color de fondo de las cabeceras */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Efecto hover en las filas de la tabla */
 }
 
 button {
@@ -35,6 +49,9 @@ button {
     cursor: pointer;         /* Cursor tipo puntero al pasar por encima */
     border-radius: 5px;     /* Bordes redondeados */
     transition: background-color 0.3s; /* Transición suave al cambiar el color */
+    display: block;          /* Para que el botón ocupe el 100% del ancho */
+    margin: 0 auto;         /* Centrar el botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
 }
 
 button:hover {
