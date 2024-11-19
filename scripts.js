@@ -1,6 +1,6 @@
 // Controlar el evento de envío del formulario
 document.getElementById('entityForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
     // Obtener valores de los campos
     const item = document.getElementById('item').value;
@@ -11,37 +11,37 @@ document.getElementById('entityForm').addEventListener('submit', function(event)
     const newEntity = { item, tipo, subtipo, promo }; // Crear el nuevo objeto entidad
 
     if (!checkOverlap(newEntity)) { // Verificar si hay superposición
-        addEntityToTable(newEntity); // Agregar a la tabla solo si no hay superposición
+        addEntityToTable(newEntity); // Agregar entidad a la tabla
     } else {
         alert('Error: La entidad ya existe en la tabla.'); // Mensaje de error si hay superposición
     }
 });
 
-const entities = []; // Arreglo para almacenar las entidades
+const entities = []; // Arreglo para almacenar entidades
 
 // Función para agregar una entidad a la tabla
 function addEntityToTable(entity) {
-    const status = 'Almacenable'; // Como no hay superposición, el estado es 'Almacenable'
-    entities.push(entity); // Almacenar la nueva entidad
+    const status = 'Almacenable'; // Estado de la entidad
+    entities.push(entity); // Almacenar la entidad en el arreglo
 
-    const tableBody = document.querySelector('#entitiesTable tbody');
+    const tableBody = document.querySelector('#entitiesTable tbody'); // Seleccionar el tbody de la tabla
     const row = tableBody.insertRow(); // Crear una nueva fila en la tabla
     row.insertCell(0).innerText = entity.item;
     row.insertCell(1).innerText = entity.tipo;
     row.insertCell(2).innerText = entity.subtipo;
     row.insertCell(3).innerText = entity.promo;
-    row.insertCell(4).innerText = status; // Asignar el estado 'Almacenable'
+    row.insertCell(4).innerText = status; // Asignar el estado
 
-    clearFormInputs(); // Limpiar los campos de entrada del formulario
+    clearFormInputs(); // Limpiar los campos del formulario
 }
 
-// Función para verificar superposición
+// Función para verificar overlap
 function checkOverlap(newEntity) {
     return entities.some(entity =>
-        entity.item === newEntity.item || // Comprueba si el item ya existe
-        entity.tipo === newEntity.tipo || // Comprueba si el tipo ya existe
-        entity.subtipo === newEntity.subtipo || // Comprueba si el subtipo ya existe
-        entity.promo === newEntity.promo // Comprueba si el promo ya existe
+        entity.item === newEntity.item || // Comparar item
+        entity.tipo === newEntity.tipo || // Comparar tipo
+        entity.subtipo === newEntity.subtipo || // Comparar subtipo
+        entity.promo === newEntity.promo // Comparar promo
     );
 }
 

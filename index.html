@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overlap Simulator</title>
+    <title>Overlap Validation Simulator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,20 +11,20 @@
     <form id="entityForm">
         <label for="item">ITEM</label>
         <input type="text" id="item" placeholder="ITEM" required>
-    
+        
         <label for="tipo">TIPO</label>
         <input type="text" id="tipo" placeholder="TIPO" required>
-    
+        
         <label for="subtipo">SUBTIPO</label>
         <input type="text" id="subtipo" placeholder="SUBTIPO">
-    
+
         <label for="promo">PROMO</label>
         <input type="text" id="promo" placeholder="PROMO" required>
-    
+
         <label for="campo5">Campo 5</label>
         <input type="text" id="campo5" placeholder="Campo 5"> 
-    
-        <button type="submit">Agregar Entidad</button> <!-- Mantenlo dentro del formulario -->
+        
+        <button type="submit">Agregar Entidad</button>
     </form>
     
     <h2>Entidades Agregadas</h2>
@@ -33,10 +33,9 @@
             <tr>
                 <th>ITEM</th>
                 <th>TIPO</th>
-                <th>SUBTIPO</th> <!-- Corrección en el encabezado -->
+                <th>SUBTIPO</th>
                 <th>PROMO</th>
                 <th>Estado</th>
-                <th>Campo 5</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +43,6 @@
         </tbody>
     </table>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Asegúrate de que esta línea esté presente -->
 </body>
 </html>
