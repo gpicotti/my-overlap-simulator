@@ -25,6 +25,13 @@ form {
     padding: 20px; /* Espacio interno del formulario */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+form label {
+    margin-top: 10px; /* Espaciado superior para las etiquetas */
 }
 
 table {
@@ -48,7 +55,7 @@ tr:hover {
 }
 
 button {
-    background-color: green; /* Color de fondo verde */
+    background-color: #4CAF50; /* Color de fondo verde suave */
     color: white;            /* Color de texto blanco */
     font-weight: bold;       /* Texto en negrita */
     border: none;            /* Sin borde */
@@ -56,9 +63,9 @@ button {
     cursor: pointer;         /* Cursor tipo puntero al pasar por encima */
     border-radius: 5px;     /* Bordes redondeados */
     transition: background-color 0.3s; /* Transición suave al cambiar el color */
+    margin-top: 20px;       /* Mayor margen superior para separar del formulario */
     display: block;          /* Para que el botón ocupe el 100% del ancho */
-    margin: 0 auto;         /* Centrar el botón */
-    text-transform: uppercase; /* Texto en mayúsculas */
+    width: 100%;             /* Para que el botón tenga el ancho completo del formulario */
 }
 
 button:hover {
