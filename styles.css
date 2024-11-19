@@ -68,6 +68,7 @@ button {
     width: 100%;             /* Para que el botón tenga el ancho completo del formulario */
 }
 
+
 button:hover {
     background-color: darkgreen; /* Color de fondo más oscuro al pasar el puntero */
 }
