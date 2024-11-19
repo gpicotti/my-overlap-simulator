@@ -9,9 +9,12 @@ h1 {
     text-align: center; /* Centrar el texto */
     margin-top: 20px;  /* Espacio superior opcional */
     margin-bottom: 20px; /* Espacio inferior opcional */
-    color: #A0C4FF; /* Azul suave (pastel) */
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto en blanco */
     font-size: 2.5em; /* Aumentar el tamaño de la fuente */
-    font-weight: bold; /* Asegúrate de que el texto esté en negrita */
+    font-weight: bold; /* Texto en negrita */
+    padding: 15px; /* Agregar padding para espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto para profundidad */
     letter-spacing: 1px; /* Espaciado entre letras */
 }
