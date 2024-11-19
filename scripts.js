@@ -1,12 +1,12 @@
 document.getElementById('entityForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const campo1 = document.getElementById('campo1').value;
-    const campo2 = document.getElementById('campo2').value;
-    const campo3 = document.getElementById('campo3').value;
-    const campo4 = document.getElementById('campo4').value;
+    const campo1 = document.getElementById('item').value;
+    const campo2 = document.getElementById('tipo').value;
+    const campo3 = document.getElementById('subtipo').value;
+    const campo4 = document.getElementById('promo').value;
 
-    const newEntity = { campo1, campo2, campo3, campo4 };
+    const newEntity = { item, tipo, subtipo, promo };
     addEntityToTable(newEntity);
 });
 
@@ -18,10 +18,10 @@ function addEntityToTable(entity) {
 
     const tableBody = document.querySelector('#entitiesTable tbody');
     const row = tableBody.insertRow();
-    row.insertCell(0).innerText = entity.campo1;
-    row.insertCell(1).innerText = entity.campo2;
-    row.insertCell(2).innerText = entity.campo3;
-    row.insertCell(3).innerText = entity.campo4;
+    row.insertCell(0).innerText = entity.item;
+    row.insertCell(1).innerText = entity.tipo;
+    row.insertCell(2).innerText = entity.subtipo;
+    row.insertCell(3).innerText = entity.promo;
     row.insertCell(4).innerText = status;
 
     clearFormInputs();
@@ -29,16 +29,16 @@ function addEntityToTable(entity) {
 
 function checkOverlap(newEntity) {
     return entities.some(entity =>
-        entity.campo1 === newEntity.campo1 ||
-        entity.campo2 === newEntity.campo2 ||
-        entity.campo3 === newEntity.campo3 ||
-        entity.campo4 === newEntity campo4
+        entity.item === newEntity.item ||
+        entity.tipo === newEntity.tipo ||
+        entity.subtipo === newEntity.subtipo ||
+        entity.promo === newEntity.promo
     );
 }
 
 function clearFormInputs() {
-    document.getElementById('campo1').value = '';
-    document.getElementById('campo2').value = '';
-    document.getElementById('campo3').value = '';
-    document.getElementById('campo4').value = '';
+    document.getElementById('item').value = '';
+    document.getElementById('tipo').value = '';
+    document.getElementById('subtipo').value = '';
+    document.getElementById('promo').value = '';
 }

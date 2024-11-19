@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+h1 {
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px;  /* Espacio superior opcional */
+    margin-bottom: 20px; /* Espacio inferior opcional */
+}
+
 form {
     margin-bottom: 20px;
 }
@@ -18,4 +24,19 @@ th, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+button {
+    background-color: green; /* Color de fondo verde */
+    color: white;            /* Color de texto blanco */
+    font-weight: bold;       /* Texto en negrita */
+    border: none;            /* Sin borde */
+    padding: 10px 15px;     /* Espaciado alrededor del texto */
+    cursor: pointer;         /* Cursor tipo puntero al pasar por encima */
+    border-radius: 5px;     /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+}
+
+button:hover {
+    background-color: darkgreen; /* Color de fondo más oscuro al pasar el puntero */
 }
