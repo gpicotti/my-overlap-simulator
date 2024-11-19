@@ -26,12 +26,19 @@ form {
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
     display: flex; /* Usar flexbox */
-    flex-direction: column; /* Colocar los elementos en columna */
-    align-items: center; /* Centrar los elementos horizontalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    align-items: center; /* Centrar los elementos verticalmente */
 }
 
 form label {
-    margin-top: 10px; /* Espaciado superior para las etiquetas */
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo */
+}
+
+form input {
+    margin-right: 10px; /* Espacio entre los campos */
+    margin-bottom: 10px; /* Espacio inferior opcional para separación */
+    flex: 1; /* Permitir que los inputs se expandan */
+    min-width: 150px; /* Ancho mínimo para los inputs */
 }
 
 table {
